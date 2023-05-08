@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Seller</title>
+    <style>
+        *{box-sizing: border-box;}
+        a{text-decoration: none;margin-right: 30px;padding-top: 10px;color: #000;}
+        ul{list-style: none;display: flex;height: 45px;font-size: 17px;}
+        nav{display: flex;background-color: #e5e5e5;height: 45px;justify-content: space-between;}
+        h6{padding-top: 10px;margin-right: 35px;}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+
+            <a href="/buy_dash"><li>Products</li></a>
+            <a href="/p_prod"><li>Purchased Products</li></a>
+            <a href="https://eservices.tn.gov.in/eservicesnew/land/chittaCheckNewRural_en.html?lan=en" target="_blank"><li>Verify</li></a>
+            <a href="/kings">img</a>
+            <a href="/"><li>Logout</li></a>
+        </ul>
+        <!-- <h6>Bal: {{value}}</h6> -->
+    </nav>
+    <section class="prod">
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">land_type</th>
+                    <th scope="col">contact</th>
+                    <th scope="col">survey</th>
+                      <th scope="col">taluk</th>
+                       <th scope="col">district</th>
+                       <th scope="col">state</th>
+                       <th scope="col">amount</th>
+                       <th scope="col">area</th>
+                      <th scope="col">enter amount</th>
+                      <th scope="col"></th>
+
+                  </tr>
+                </thead>
+                <tbody>
+					{% for row in data %}
+                    <form method="post" action="/betam">
+					<tr>
+                        
+						<td scope="row"><input type="text" value="{{row[0]}}" name="" readonly></td>
+						<td> <input type="text" value="{{row[1]}}" name="name" readonly></td>
+						<td><input type="text" value="{{row[2]}}" name="d_name" readonly></td>
+						<td><input type="text" value="{{row[4]}}" name="contact" readonly></td>
+						<td><input type="text" value="{{row[5]}}" name="survey" readonly></td>
+                        <td><input type="text" value="{{row[6]}}" name="d_name" readonly></td>
+                        <td><input type="text" value="{{row[7]}}" name="d_name" readonly></td>
+                        <td><input type="text" value="{{row[8]}}" name="d_name" readonly></td>
+                        <td><input type="text" value="{{row[9]}}" name="amount" readonly></td>
+                        <td><input type="text" value="{{row[10]}}" name="d_name" readonly></td>
+                        <td><input type="number" name="pamt" placeholder="Enter the amount"/></td>
+                        <td> 
+
+                            
+                            <button type="submit">submit</button></td>
+
+					  </tr>  </form>
+					{% endfor %}
+                </tbody>
+            </table>
+       </div>
+    </section>    
+</body>
+</html>

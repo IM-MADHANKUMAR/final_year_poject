@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Admin</title>
+    <style>
+        *{box-sizing: border-box;}
+        body{background-image: url('static/img/f-bg.jpg');background-repeat:no-repeat;background-size: cover;
+			background-position: center;}
+        a{text-decoration: none;margin-right: 30px;padding-top: 10px;color: #000;}
+        ul{list-style: none;display: flex;background-color: #e5e5e5;height: 45px;font-size: 17px;}
+        .column {
+        display: inline-block;width: 50%;float:left;text-align: center;box-sizing: border-box;padding: 10px;vertical-align: top;
+      }
+     
+      .row::after {
+    content: "";clear: both;display: flex;justify-content: center;
+  
+  }
+  .my-button {
+    background-color: rgb(57, 93, 117);color: white;padding: 10px;border-radius: 5px;font-size: 16px;cursor: pointer;
+    border: none;
+  }
+  .row {
+    padding: 0 120px;
+  }
+  .column {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 150px;
+  vertical-align: top;
+  border: 3px solid black; /* add a border */
+}
+
+.column:first-child {
+  border-right: 2px solid black; /* add a right border to the first column */
+}
+
+.column:last-child {
+  border-left: 2px solid black; /* add a left border to the last column */
+}
+
+    </style>
+</head>
+<body><br><br><br><br><br><br>
+    <div class="row">
+        <div class="column">
+          <h2>Buyer Details</h2>
+          <p>Details of the buyer</p>
+          <a href="/buy_detail" class="my-button">View</a>
+        </div>
+        <div class="column">
+          <h2>Seller Details</h2>
+          <p>Details of the Seller</p>
+          <a href="/sell_detail" class="my-button">View</a>
+        </div>
+      </div>
+      
+   
+</body>
+</html>
